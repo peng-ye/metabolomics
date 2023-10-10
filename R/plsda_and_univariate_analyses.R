@@ -3,7 +3,7 @@ library(pls)
 library(DiscriMiner) # plsDA
 library(MetabolAnalyze)
 
-source("/path/to/your/metaX/R/model.R")
+source("metaX/R/model.R")
 runInlinePLSDA = function(...,xx,y,ncomp,validation,k=7,
                           method = "oscorespls"){
   sid<-sample(length(y),length(y))
