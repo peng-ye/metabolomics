@@ -15,7 +15,7 @@ runInlinePLSDA = function(...,xx,y,ncomp,validation,k=7,
 }
 
 # adapted from MetaX
-PLSDA_ye <- function(x, y, prefix, ncomp=3, validation="CV", k=7, n=200, method = "oscorespls") {
+PLSDA <- function(x, y, prefix, ncomp=3, validation="CV", k=7, n=200, method = "oscorespls") {
   x=as.matrix(x)
   
   result <- list()
@@ -142,7 +142,7 @@ PLSDA_ye <- function(x, y, prefix, ncomp=3, validation="CV", k=7, n=200, method 
   y <- your_grouping_info
 
   ## PLSDA
-  plsda <- PLSDA_ye(x, y, "./prefix_for_your_plots/e.g._A_H-") 
+  plsda <- PLSDA(x, y, "./prefix_for_your_plots/e.g._A_H-") 
   write.table(data.frame(VIP=plsda$VIP), "path/to/your/output.txt", sep="\t", col.names = NA, quote = F)
 
 
